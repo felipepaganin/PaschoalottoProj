@@ -1,0 +1,51 @@
+<div class="card">
+  <form class="example-form" [formGroup]="debtForm">
+    <div class="mobile">
+      <mat-form-field class="example-full-width" fxFlex="auto" cellspacing="1">
+        <mat-label>Número do título</mat-label>
+        <input required formControlName="titleNumber" matInput placeholder="Ex. 001" type="number">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" fxFlex="auto" cellspacing="50">
+        <mat-label>Nome do devedor</mat-label>
+        <input formControlName="name" matInput placeholder="Ex. Pedro">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" fxFlex="auto">
+        <mat-label>CPF do devedor</mat-label>
+        <input formControlName="cpf" matInput placeholder="Ex. 64027267028" mask="000.000.000-00">
+      </mat-form-field>
+    </div>
+    <div class="mobile">
+      <mat-form-field class="example-full-width" fxFlex="auto">
+        <mat-label>% de juros</mat-label>
+        <input formControlName="finefee" matInput placeholder="Ex. 2%" type="number">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" fxFlex="auto">
+        <mat-label>% de multa</mat-label>
+        <input formControlName="interest" matInput placeholder="Ex. 5%" type="number">
+      </mat-form-field>
+    </div>
+    <div class="mobile">
+      <mat-form-field class="example-full-width" fxFlex="auto">
+        <mat-label>Parcelas da divida</mat-label>
+        <input formControlName="parcel" matInput placeholder="Ex. 5" type="number">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" fxFlex="auto">
+        <mat-label>Número da parcela</mat-label>
+        <input formControlName="parcelnumber" matInput placeholder="Ex. 1" type="number">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" fxFlex="auto">
+        <mat-label>Data de vencimento</mat-label>
+        <input formControlName="dueDate" matInput placeholder="Ex. 15/06/2020" mask="00/00/0000">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" fxFlex="auto">
+        <mat-label>Valor da parcela</mat-label>
+        <input formControlName="price" matInput placeholder="Ex. R$499,00" mask="0000.00"> 
+      </mat-form-field>
+    </div>
+    <section>
+      <div class="example-button-row" fxLayout="row" fxLayoutAlign="end center">
+        <button type="submit" [disabled]="!debtForm.valid" mat-raised-button color="primary" (click)="save()">Salvar</button>
+      </div>
+    </section>
+  </form>
+</div> 

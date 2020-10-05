@@ -1,0 +1,18 @@
+.example-form {
+  min-width: 150px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+mat-form-field{
+  margin-left: 1.2em;
+}
+
+@media only screen and (max-width: 800px){
+  .mobile{
+    display: grid !important;
+  }
+} 
